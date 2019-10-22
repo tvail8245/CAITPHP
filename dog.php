@@ -3,11 +3,11 @@
 class dog
 {
 var $name;
+var $breed;
 var $color;
 var $height;
 var $length;
 var $weight;
-var $breed;
 var $has_fleas;
 
     public function de_flea()
