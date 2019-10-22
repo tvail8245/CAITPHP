@@ -3,10 +3,15 @@
 
 </header>
 <body>
-<form action="results.php" method="post" >
+<form action="results.php" method="post">
     Name: <input type="text" name="name"><br>
-    Color: <input type="text" name="color"><br>
     Breed: <input type="text" name="breed"><br>
+    Color: <select name="color">
+        <option value="brown">Brown</option>
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        <option value="brindle">Brindle</option>
+    </select>
     Height: <input type="number" name="height"><br>
     Length: <input type="number" name="length"><br>
     Weight: <input type="number" name="weight"><br>
@@ -14,11 +19,6 @@
     <input type="submit">
 </form>
 </body>
-
-
-
-
-
 
 
 </html>
