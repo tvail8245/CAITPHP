@@ -9,4 +9,5 @@ $dog->color = $_POST['color'];
 $dog->height = $_POST['height'];
 $dog->length = $_POST['length'];
 $dog->weight = $_POST['weight'];
+$dog->has_fleas = $_POST['has_fleas'];
 print_r($dog);
