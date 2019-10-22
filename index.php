@@ -11,6 +11,7 @@
     Length: <input type="number" name="length"><br>
     Weight: <input type="number" name="weight"><br>
     Has_fleas: <input type="checkbox" name="has_fleas"><br>
+    <input type="submit">
 </form>
 </body>
 
