@@ -11,7 +11,7 @@
         <option value="white">White</option>
         <option value="black">Black</option>
         <option value="brindle">Brindle</option>
-    </select>
+    </select><br>
     Height: <input type="number" name="height"><br>
     Length: <input type="number" name="length"><br>
     Weight: <input type="number" name="weight"><br>
