@@ -1,28 +1,23 @@
-<?php
-require_once ('dog.php');
+<html>
+<header>
 
-$dog = new dog();
-
-
-$dog->has_fleas = 1;
-$dog->color = "brown";
-$dog->breed = "chocolate Lab";
-$dog->height = 23;
-$dog->length = 60;
-$dog->name = "Spot";
-$dog->weight = 85;
-
-print_r($dog);
-
-if ($dog->weight >= 80){
-    $dog->thin_down(10);
-} elseif ($dog->weight <= 50)
-{
-    $dog->fatten_up(20);
-}
-$dog->de_flea();
+</header>
+<body>
+<form action="results.php" method="post" >
+    Name: <input type="text" name="name"><br>
+    Color: <input type="text" name="color"><br>
+    Breed: <input type="text" name="breed"><br>
+    Height: <input type="number" name="height"><br>
+    Length: <input type="number" name="length"><br>
+    Weight: <input type="number" name="weight"><br>
+    Has_fleas: <input type="checkbox" name="has_fleas"><br>
+</form>
+</body>
 
 
-echo "</br> \n";
 
-print_r($dog);
+
+
+
+
+</html>
