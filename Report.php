@@ -13,18 +13,12 @@ if ($conn->connect_error) {
     echo "connection success <br> ";
 }
 
-/*
-$sql = "INSERT INTO dog_features
-    ( name, breed, height, length, weight, has_fleas )
-    VALUES
-    ('$dog->name', '$dog->breed', '$dog->color', '$dog->height', '$dog->length', '$dog->weight', '$dog->has_fleas' )";*/
-
 $sql = "select * from dog_features";
 
 if ($result = $conn->query($sql) == TRUE) {
-    while ($row = $result->fetch_object()) {
-                print_r($row);
-            }
+    while ($row = $result->fetch_row()) {
+        print_r($row);
+    }
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
