@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
 $sql = "select * from dog_features";
 
-if ($result = $conn->query($sql) == TRUE) {
+if ($result = $conn->query($sql)) {
     while ($row = $result->fetch_row()) {
         print_r($row);
     }
