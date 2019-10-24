@@ -29,17 +29,23 @@ $conn = new mysqli('localhost', 'root', 'M3rcielago!', 'dog_database' );
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} else {
-    $sql = "INSERT INTO 'dog_features'
-    ( 'name', 'breed', 'color', 'height', 'length', 'weight', 'has_fleas' )
+}
+
+if (is_null($dog->has_fleas)){
+    //die("dog_fleas_is_null");
+    $dog->has_fleas = 0;
+}
+
+    $sql = "INSERT INTO dog_features
+    ( name, breed, color, height, length, weight, has_fleas )
     VALUES
-    ( $dog->name , $dog->breed , $dog->color , $dog->height , $dog->length , $dog->weight , $dog->has_fleas )";
+    ( '$dog->name' , '$dog->breed' , '$dog->color' , '$dog->height' , '$dog->length' , '$dog->weight' , '$dog->has_fleas' )";
 
     echo "connection success <br> ";
     echo $sql;
     if(!$conn->query($sql))
     {die('Error');}
-}
+
 
 $conn->close();
 
