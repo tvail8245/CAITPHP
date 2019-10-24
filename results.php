@@ -23,4 +23,22 @@ if ($dog->weight>75){
     $dog->thin_down(10);
 }
 
+// Create connection
+$conn = new mysqli('localhost', 'root', 'M3rcielago!', 'dog_database' );
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} else {
+    $sql = "INSERT INTO 'dog_features'
+    ( 'name', 'breed', 'height', 'length', 'weight', 'has_fleas' )
+    VALUES
+    ( $dog->name , $dog->breed , $dog->color , $dog->height , $dog->length , $dog->weight , $dog->has_fleas )";
+    echo "connection success <br> ";
+    echo $sql;
+}
+
+
+$conn->close();
+
 print_r($dog);
