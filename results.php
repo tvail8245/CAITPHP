@@ -31,14 +31,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } else {
     $sql = "INSERT INTO 'dog_features'
-    ( 'name', 'breed', 'height', 'length', 'weight', 'has_fleas' )
+    ( 'name', 'breed', 'color', 'height', 'length', 'weight', 'has_fleas' )
     VALUES
     ( $dog->name , $dog->breed , $dog->color , $dog->height , $dog->length , $dog->weight , $dog->has_fleas )";
+
     echo "connection success <br> ";
     echo $sql;
+    if(!$conn->query($sql))
+    {die('Error');}
 }
-
 
 $conn->close();
 
-print_r($dog);
